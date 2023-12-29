@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFICENS SOFTWARE SERVICES PRIVATE LIMITED</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        header {
+            height: 100px;
+            width: 100%;
+            background-color: whitesmoke;
+            position: fixed;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        table {
+            background-color: white;
+            padding: 30px;
+            margin: 100px;
+            border-radius: 7px;
+
+        }
+
+        input[type=text],
+        input[type=email],
+        select {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid lightblue;
+
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        .w3-left,
+        .w3-right,
+        .w3-badge {
+            cursor: pointer
+        }
+
+        .w3-badge {
+            height: 13px;
+            width: 13px;
+            padding: 0
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #ffffff;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #ffffff;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #999999;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #111111;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="header">
+                <a href="">
+                    <img src="https://eficens.ai/assets/img/logo.svg"
+                        style="width: 250px; margin-left: 100px; margin-top: 20px;">
+                </a>
+            </div>
+
+            <div class="pure-menu-horizontal" style="margin: 30px; margin-left: 350px;">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" class="pure-menu-link">Sevices</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item">
+                                <a href="#" class=" pure-menu-link">Consulting Sevices</a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class=" pure-menu-link">
+                                    Digital Transformation Servies
+                                </a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class=" pure-menu-link">Cloud Sevices</a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class=" pure-menu-link">
+                                    Data Platform Servies
+                                </a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class=" pure-menu-link">
+                                    Managed Servies
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="#" class="pure-menu-link">
+                            Products
+                        </a>
+                    </li>
+                </ul>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="#" class="pure-menu-link">
+                            Partners
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" class="pure-menu-link">About Us</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item">
+                                <a href="#" class=" pure-menu-link">Company</a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class=" pure-menu-link">
+                                    LeaderShip
+                                </a>
+                            </li>
+                            <li class="pure-menu-item">
+                                <a href="#" class=" pure-menu-link">
+                                    CSR
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="#" class="pure-menu-link">
+                            Careers
+                        </a>
+                    </li>
+                </ul>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="#" class="pure-menu-link">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+    <div class="background"
+        style="background-image: url(https://eficens.ai/assets/img/Hero-BG.svg); background-size: cover;height: 650px; ">
+        <div style="display: flex;">
+            <div style="width: 50%; margin-top: 200px;">
+                <h1 style="font-size: 40px; margin-left: 105px;">Innovate, Scale, Accelerate,
+                    <br>Digital
+                    Transformation
+                </h1>
+                <p style="margin-left: 105px; line-height: 130%;">Eficens specializes in delivering transformational
+                    changes swiftly and
+                    efficiently,<br>empowering you to
+                    attain your business outcomes at scale</p>
+                <button type="button"
+                    style="margin-left: 105px; padding: 7px; width: 130px; border-radius: 50px; background-color: #e77721; color: white; border:none;">Contact
+                    Us</button>
+
+            </div>
+            <div>
+                <img src="https://eficens.ai/assets/img/hero-sec.webp" style="width: 650px; margin-top: 140px;">
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #e77721; padding: 48px 12px;">
+        <div style="text-align: center; ">
+            <h3
+                style="background-color: white; color: #e77721;padding: 10px 20px; border-radius: 50px; display: inline-block; margin: 0px;">
+                Our Customers</h3>
+        </div>
+        <div style="display: flex; justify-content: space-evenly; margin-top: 30px;">
+            <img src="https://eficens.ai/assets/img/partners/tek.png" style="width: 302px; height: 91px;">
+            <img src="https://eficens.ai/assets/img/partners/td.png" style="width: 302px; height: 91px;">
+            <img src="https://eficens.ai/assets/img/partners/Bundlar.webp" style="width: 302px; height: 91px;">
+            <img src="https://eficens.ai/assets/img/partners/ogni.png" style="width: 302px; height: 91px;">
+        </div>
+    </div>
+    <div class="background">
+        <div style="display: flex;">
+            <div style="width: 50%; margin-top: 130px;">
+                <h1 style="font-size: 40px; margin-left: 105px;">
+                    Embrace Our Services for Your Everyday Needs
+                </h1>
+                <p style="margin-left: 105px; line-height: 130%; word-spacing: 3px;">
+                    We offer a complete suite of services that simplifies your operations and <br>streamlines your
+                    business.From cloud solutions and data analytics to <br>application management and infrastruture
+                    support, our team of experts is <br>committed to delivering the highest quality service to grow your
+                    business.
+                </p>
+            </div>
+            <div>
+                <img src="https://eficens.ai/assets/img/index/services.svg" style="width: 650px; margin-top: 60px;">
+            </div>
+        </div>
+    </div>
+    <div style="background-color: whitesmoke; height: 500px;">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://community.nasscom.in/sites/default/files/media/images/Untitled%20design%20%286%29_2.png"
+                    style="width:100%; height: 500px;">
+                <div class="text" style="background-color:#e77721;">
+                    <h1>Join the Cloud Revolution</h1>
+                    <p>Our team of certified cloud experts provides end-to-end management of your cloud environment, so
+                        you
+                        can focus on what really matters - your business.</p>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="https://assets.entrepreneur.com/content/3x2/2000/20180514212041-GettyImages-876388294.jpeg"
+                    style="width:100%; height: 500px;">
+                <div class="text" style="background-color:#e77721;">
+                    <h1>Consulting Services</h1>
+                    <p>Our seasoned experts are committed to providing detailed insights, guidance, and strategies
+                        necessary
+                        to foster expansion, increase effectiveness, and outperform your competitors.</p>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://thumbs.dreamstime.com/b/digital-transformation-technology-strategy-digitization-digitalization-business-processes-data-optimize-automate-operations-185365882.jpg"
+                    style="width:100%; height: 500px;">
+                <div class="text" style="background-color:#e77721;">
+                    <h1>Digital Transformation</h1>
+                    <p>We bring together the cutting-edge technology, industry expertise, and a customer-centric
+                        approach
+                        for seamless digital transformations that align with your business objectives.</p>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://www.cio.com/wp-content/uploads/2023/03/big_data_analytics_analysis_thinkstock_673266772-100749739-orig-100893272-orig-1.jpg?quality=50&strip=all"
+                    style="width:100%; height: 500px;">
+                <div class="text" style="background-color:#e77721;">
+                    <h1>Unlock the Power of Data</h1>
+                    <p>We understand the value of data and the importance of leveraging it to drive business success.
+                        That's
+                        why we offer comprehensive Data & AI services, providing end-to-end solutions for all your
+                        data-related needs.</p>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)" style="border-radius: 50%; background-color: #e77721;">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)" style="border-radius: 50%; background-color: #e77721;">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+    <div class="background" style="margin-top: 20px;">
+        <div style="display: flex;">
+            <div>
+                <img src="https://eficens.ai/assets/img/tech-sec.webp" style="width: 608px; margin-left: 100px;">
+            </div>
+            <div style="width: 50%; margin-top: 130px;">
+                <h1 style="font-size: 40px; margin-left: 105px;">
+                    Technology with Passion
+                </h1>
+                <p style="margin-left: 105px; line-height: 130%; word-spacing: 3px;">
+                    Our products, tools, and accelerators are all fueled by our <br> customer-focused mission to ensure
+                    their success is at the heart <br> of everything we do. we belive in harnessing the power of <br>
+                    technology to make a difference in people's lives, whick is why <br> we focus on developing
+                    innovative products that meet customer <br> needs while being easy to use. Our goal is to
+                    continuously <br> improve business outcomes with reliable, cost-effective tools that <br> our
+                    customers can trust.
+                </p>
+                <button type="button"
+                    style="margin-left: 105px; padding: 10px; width: 110px; border-radius: 50px; background-color: #e77721; color: white; border:none;">
+                    Explore</button>
+            </div>
+        </div>
+    </div>
+    <div class="background">
+        <div style="display: flex;">
+            <div style="width: 50%; margin-top: 100px;">
+                <h1 style="font-size: 40px; margin-left: 105px;">
+                    Forging Digital Ecosystems Through Extraordinary Partnerships
+                </h1>
+                <p style="margin-left: 105px; line-height: 130%; word-spacing: 3px;">
+                    Strong relationships with leading providers create a roubst network that <br> enables us to provide
+                    quality solutions quickly. Our offerings encompass a wide <br> range of solutions designed to meet
+                    the diverse needs of our clients. We believe <br> these partnerships are vital to delivering
+                    exceptional value and success for our <br> clients. Join us on this transformative journey as we
+                    forge ahead and make <br> lasting impacts through our partnerships in the digital world.
+                </p>
+            </div>
+            <div>
+                <img src="https://eficens.ai/assets/img/partner-sec.png"
+                    style="width: 650px; margin-top: 60px; margin-right: 50px;">
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #f7f2ef; margin-left: 100px; margin-right: 60px; height: 765px; border-radius: 25px;">
+        <div class="background">
+            <div style="display: flex;">
+                <div style="width: 50%; margin-top: 200px;">
+                    <h1 style="font-size: 40px; margin-left: 105px;">
+                        Sustainable Computing
+                    </h1>
+                    <p style="margin-left: 105px; line-height: 130%;font-family: sans-serif;">
+                        We understand that many private and public sector organizations need <br> help achieving their
+                        sustainability goals or reducing opertional costs. <br> Whether in data centers or machinery,
+                        Eficens
+                        supports and produces <br> technologies in clean enery equipment and intelligent monitoring and
+                        <br>
+                        metering that tracks usage and savings and provides predictive analytics relevant to ES&G
+                        goals.
+                        <br><br>
+                        Furthermore, Eficens has robust cloud solutions capabilities and is an <br> expert at cloud
+                        migration for its clients. A cloud hosting provider can better deploy IT infrastructure
+                        with greater
+                        efficiency at scale - and far more efficiently than IT operated in client-server
+                        environments. This results in substantial energy savings and decreased waste because the
+                        amount of
+                        equipment required per user in the cloud is far less.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://eficens.ai/assets/img/computing.svg"
+                        style="width: 697px; margin-top: 0px; height: 637;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background"
+        style="background-image: url(https://eficens.ai/assets/img/support-bg.webp); height: 405px; width: 1311px; background-repeat: no-repeat; margin-left: 100px; margin-top: 150px;">
+        <div style="display: flex;">
+            <div>
+                <img src="https://eficens.ai/assets/img/support-eng.png" style="width: 336px; margin-left: 100px; margin-top: -75px;
+                    max-height: 480px;">
+            </div>
+            <div style="width: 60%; margin-top: 90px;">
+                <h1 style="font-size: 50px; margin-left: 250px; color: white;">
+                    Give us a shout. Speak to an expert.
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="regis">
+            <div style="display: flex;">
+                <div
+                    style="width: 50%; margin-top: 100px; background-image: url(https://eficens.ai/assets/img/Hero-BG.svg); background-size: cover;height: 540px; ">
+                    <div style="margin-top: 100px;">
+                        <h1 style="font-size: 40px; margin-left: 105px; color: #e77721;">
+                            Join Us in Building Exceptional Digital Ecosystems
+                        </h1>
+                        <p style="margin-left: 105px; line-height: 130%; word-spacing: 3px; font-family: sans-serif;">
+                            We're looking for talented individuals passionate about developing and <br> implementing
+                            innovative
+                            solutions for our clients. As a member of our team, <br> you'll have the opportunity to work
+                            on
+                            exciting
+                            projects that challenge you <br> and expand your skills. We value diversity, creativity, and
+                            collaboration and are <br> committed to investing in our employees' growth and development.
+                        </p>
+                    </div>
+                </div>
+                <div style="width: 50%; margin-top: 40px;">
+                    <form
+                        style="border: 1px solid rgba(0, 0, 0, 0.1);  height: 600px; margin-right: 70px; border-radius: 10px;">
+                        <div>
+                            <div style="display: flex; margin-top: 30px;">
+                                <label style="margin-left: 30px;">Name*</label><br><br>
+                                <input type="text">
+                                <label>Email*</label><br><br>
+                                <input type="email">
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <label style="margin-left: 30px;">Phone</label><br>
+                                <input type="number"
+                                    style="border: none; border-bottom: 1px solid lightblue; width: 500px; margin-left: 30px;">
+                            </div>
+                            <div style="margin-top: 5px;">
+                                <lable style="margin-left: 30px;">Message*</lable>
+                                <textarea cols="70" rows="10"
+                                    style="border: none; border-bottom: 1px solid lightblue; margin-left: 30px;"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit"
+                                    style="margin-left: 520px; padding: 12px; border-radius: 8px; border: none; background-color: #e77721; margin-top: 100px;">Send
+                                    Message</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3
+                                style="margin-left: 30px; color:rgba(0, 0, 0, 0.5); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-top: -0px;">
+                                *Required</h3>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="last" style="margin-top:40px ;background-color: #f7f2ef;">
+                <div style=" display: flex;">
+                    <div style="width: 50%;  display: flex;margin-left: 105px; margin-top: 50px;">
+                        <h3>Follow Us: </h3>
+                        <img src="https://iconsplace.com/wp-content/uploads/_icons/ffa500/256/png/linkedin-icon-11-256.png"
+                            style="height: 20px; width: 20px; margin-top: 20px; margin-left: 10px;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSLqpdK2S57NR71Nbleoah0yLv4Ce-jfH7BQpNt2shrw&s"
+                            style="height: 20px; width: 20px; margin-top: 20px; margin-left: 10px;">
+                    </div>
+
+                    <div class="img">
+                        <img src="https://eficens.ai/assets/img/logo.svg"
+                            style="width: 200px; margin-top: 60px; margin-left: 350px;">
+                    </div>
+                </div>
+                <div class="last">
+                    <div style="display: flex;">
+                        <div>
+                            <p style="margin-top: 90px; margin-left: 105px;">
+                                © 2023 Eficens Systems. All rights reserved.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="margin-top: 70px; margin-left: 550px; line-height: 50px;">Terms of Use | Privacy
+                                Poilicy<br>
+                                Products | Partners | About Us | Careers | Contact Us
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                let slideIndex = 0;
+                let timeoutId = null;
+                const slides = document.getElementsByClassName("mySlides");
+                const dots = document.getElementsByClassName("dot");
+
+                showSlides();
+                function currentSlide(index) {
+                    slideIndex = index;
+                    showSlides();
+                }
+                function plusSlides(step) {
+
+                    if (step < 0) {
+                        slideIndex -= 2;
+
+                        if (slideIndex < 0) {
+                            slideIndex = slides.length - 1;
+                        }
+                    }
+
+                    showSlides();
+                }
+                function showSlides() {
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        dots[i].classList.remove('active');
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].classList.add('active');
+                    if (timeoutId) {
+                        clearTimeout(timeoutId);
+                    }
+                    timeoutId = setTimeout(showSlides, 5000); // Change image every 5 seconds
+                }
+            </script>
+
+
+</body>
+
+</html>
